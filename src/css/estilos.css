@@ -10,7 +10,7 @@ body{ /* CORPO DO HTML GERAL */
    
     justify-content: center; /* X */
     align-items: space-around; /* X */
-    min-height: 100vh; /* X */  /* marcados em X são possívels por conta do DISPLAY FLEX */
+    min-height: 70vh; /* X */  /* marcados em X são possívels por conta do DISPLAY FLEX */
     padding: 10px;
     gap:20%;
 }
