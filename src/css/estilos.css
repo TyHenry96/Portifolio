@@ -1,0 +1,261 @@
+body{ /* CORPO DO HTML GERAL */
+    background-image: url(/src/imagens/fundo-tela.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    font-family: 'VT323', monospace;
+    color: #f3f3f3;
+    font-size: 16px;
+    display: flex; /* aqui libera sistema semelhante a flexbox e permite organização do conteúdo sem caos */
+   
+    justify-content: center; /* X */
+    align-items: space-around; /* X */
+    min-height: 100vh; /* X */  /* marcados em X são possívels por conta do DISPLAY FLEX */
+    padding: 10px;
+    gap:20%;
+}
+
+header {
+    display: flex;
+    flex-direction: row;
+} 
+
+.assinatura{
+    align-self: flex-end;
+    text-align: right;
+    font-size: 12px;
+    color: #570f53;
+}
+
+
+.cartao{ /* DIV DE TODO O CORPO DO CARTÃO */
+    background-color: #131313;
+    width: 500px;
+    border: 2px solid #7e1078; /* importante ter 3 propriedades */
+    border-radius: 10px;
+    overflow: hidden; /* cantos da div sem sobrepor o contorno do cartão */
+    animation: cartao 1s linear; /* configurar a animação, dar um nome a ela e determinar sua duração */
+
+}
+@keyframes cartao { /* estados que farão parte da transição da animação */
+    from{ opacity: 0;
+    }
+    to{ opacity: 1; 
+    }
+}
+
+.cartao .abas img {  /* ICONES DE EXTENSÃO GIF */
+    width: 25px;  
+}
+
+.cartao .minhas-informacoes img{ /* FOTO DE PERFIL */
+    border-radius: 50px;
+    border: 4px solid #7e1078;
+}
+
+.cartao .minhas-informacoes{ /* CABEÇALHO DO PORTIFOLIO */
+    padding-top: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* alinha horizontalmente os itens em coluna */
+    gap: 12px;
+
+}
+
+.cartao .minhas-informacoes .nome{ /* NOME ABAIXO DO PERFIL */
+    font-size: 24px;
+}
+
+.cartao .minhas-informacoes .cargo{ /* FUNÇÃO ABAIXO DO NOME */
+    font-size: 18px;
+    color: #b8bbc5;
+}
+
+.cartao .conteudo { 
+    margin-top: 15px; /* DISTANCIA DO CONTEUDO EM RELAÇÃO À BORDA INFERIOR */
+    
+}
+
+.cartao .abas{ /* ABAS DO CURRICULO */
+    display: flex; /* ao colocar esse atributo os dados são automaticamente colocados em modo horizontal (grid) */
+}
+
+.cartao .abas .aba{ /* propriedades de aba uma por uma */
+    width: 50%; /* dimensão de cada aba valendo metade da dimensão do cartao */
+    display: flex;
+    justify-content: center;
+    padding: 10px 0; /* espaço de 10px em cima e em baixo e 0 dos lados */ 
+    cursor: pointer;
+    transition: background-color 0.3s ease-in-out; /* transição da pseudoclasse HOVER */
+}
+
+.cartao .abas .aba.selecionado{
+    background-color: #262626;
+}
+.cartao .informacoes-abas {
+    background-color: #262626;
+    
+}
+.cartao .abas .aba:hover{ /* pseudoclasse para função hover ali da propriedade CURSOR: POINTER linha 71 */
+    background-color: #7e1078;
+}
+
+.informacoes-abas .informacao { /* aba não selecionada */
+    min-height: 250px;
+    padding: 20px;
+    display: none; /* Esconde as duas informações */
+}
+
+.informacoes-abas .informacao.selecionado { /* vale lembrar que nomes compostos em classes tem o . pra representar o espaçamento da palavra composta */
+    display: block;
+}
+
+.informacoes-abas .sub-titulo{
+    font-size: 22px;
+    margin-bottom: 25px;
+    text-align: center;
+
+}
+
+.informacoes-abas .descricao{
+    font-size: 20px;
+    max-height: 180px;
+    overflow-y: auto;
+    padding-right: 15px;
+}
+::-webkit-scrollbar{
+    background-color: #545454;
+    width: 5px;
+    border-radius: 5px;
+}
+::-webkit-scrollbar-thumb{
+    background-color: #7e1078;
+    border-radius: 5px;
+}
+
+.informacoes-abas .descricao span{
+    color: #b618ae;
+}
+
+.redes-sociais{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    align-items: center;
+    max-height: 180px;
+    overflow-y: auto;
+
+}
+
+
+/* Inicio edição de botoes das redes sociais */
+
+.redes-sociais li a{
+    width: 250px;
+    display: block;
+    color: #f3f3f3;
+    text-align: center;
+    padding: 10px;
+    font-size: 20px;
+    border-radius: 5px;
+    transition: opacity 0.3s ease-in-out;
+
+}
+
+.redes-sociais .curriculo{
+    background-color: #06c185;
+}
+.redes-sociais .curriculo:hover{ /* função hover */
+    opacity: 0.7;
+}
+.redes-sociais .instagram{
+    background-color: #1d87bd;
+}
+.redes-sociais .instagram:hover{/* função hover */
+    opacity: 0.7;
+}
+
+.redes-sociais .github{
+    background-color: #545454;
+}
+.redes-sociais .github:hover{/* função hover */
+    opacity: 0.7;
+}
+
+/* Fim edição de botoes das redes sociais */
+
+
+/* Começando edição do menu hamburguer */
+
+
+.nav-button{
+    width: 25px;
+    height: 25px;
+    border: 0;
+    border-radius: 5px;
+    padding: 1px;
+    background-color: #570f53;
+    margin: 5px;
+    cursor: pointer;
+    align-self: flex-start;
+    
+}
+
+.nav-button i{
+    color: #fff;
+}
+
+.overlay{
+    height: 100%;
+    /* background-color: rgb(0, 0, 0); */
+    background-color: rgba(0, 0, 0, 0.9);
+    z-index: 8;
+    position: fixed;
+    width: 0%;
+    left: 0;
+    top: 0;
+    overflow-x: hidden;
+    transition: all 0.5s;
+}
+
+.overlay-content{
+    position: relative;
+    top: 25%;  
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+}
+
+.overlay a{
+    padding: 8px;
+    text-decoration: none;
+    color: #818181;
+    display: flex;
+    justify-content: center;
+    font-size: 30px;
+    transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus{
+    color: #f1f1f1;
+}
+
+.overlay .closebtn{
+    position: absolute;
+    top: 5px;
+    right: 15px;
+    font-size: 50px;
+}
+
+@media screen and (max-height: 450px){
+    .overlay a{font-size: 20px;}
+    .overlay, .closebtn{
+        font-size: 40px;
+    }
+}
+
+.nav-button:hover{
+    background-color: #310a2f;
+}
+
+

@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!--CSS no menu HAMBURGUER-->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=VT323&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="./src/css/reset.css">
+    <link rel="stylesheet" href="./src/css/estilos.css">
+
+    <title>Portifólio</title>
+</head>
+<body>
+    <header>
+
+        <h1 class="logo">PORTIFÓLIO</h1>
+
+        <button class="nav-button" onclick="openNav()">
+            <i class="fa-solid fa-bars fa-1x"></i>
+        </button>
+
+        
+        <!--Aqui é onde coloco o menu de hamburguer-->
+        
+        <div id="myNav" class="overlay">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">x</a>
+            <div class="overlay-content">
+                <a href="#">FIGMA</a>
+                <a href="#">ESTUDOS JS</a>
+                <a href="#">LANDING PAGE</a>
+                <a href="#">CURRICULO</a>
+            </div>
+    
+        </div>
+        
+    
+    </header>
+
+
+
+    
+
+    <!--Aqui se encontra todo o código editado do início ao fim ;)-->
+    <main class="cartao">
+        <div class="minhas-informacoes">
+            <img width="100px" src="./src/imagens/foto-perfil.jpeg" alt="foto de perfil">
+            <h1 class="nome" style="font-family: 'VT323', cursive;">Henrique Maia</h1>
+            <h2 class="cargo" style="font-family: 'VT323', cursive;">UX/UI Designer Junior</h2>
+            <h2 class="cargo" style="font-family: 'VT323', cursive;">Desenvolvedor Front-End Junior</h2>
+        </div>
+
+        <div class="conteudo">
+            <ul class="abas">
+                <li class="aba selecionado" id="sobre-mim">
+                    <img src="./src/imagens/sobre.gif" alt="icone sobre mim">
+                </li>
+                <li class="aba" id="minhas-redes">
+                    <img src="./src/imagens/coracao.gif" alt="incone de redes sociais">
+                </li>
+            </ul>
+
+            <div class="informacoes-abas">
+                 <div class="informacao selecionado" id="informacao-sobre-mim">
+                    <h3 class="sub-titulo" style="font-family: 'VT323', cursive;">Sobre Mim</h3>
+
+                    <div class="descricao">
+                        <p style="font-family: 'VT323', cursive;">Olá Mundo! Lá vai uma breve Bibliografia:</p>
+
+                    </br>
+
+                        <p style="font-family: 'VT323', cursive;">Meu nome é Henrique Maia Tolentino, tenho 26 anos e estou a algum tempo
+                        me inserido no mundo da programação FRONT END aprendendo as três principais linguagens: <span> HTML, CSS e JavaScript.</span>
+                        Como eu vim parar aqui? Vou te contar...
+                        </p>
+                    </br>
+                        <p>
+                        Tenho formação Acadêmica de Licenciatura em Matemática pela Universidade Federal de Uberlândia (UFU), em Minas Gerais,
+                        e atuo como professor de Matemática do Nível Fundamental 2 em escola municipal da cidade desde 2021. Antes disso fui professor
+                        particular na minha área durante do início ao fim da minha formação acadêmica (2014 - 2019). Então já estou com a carreira feita,
+                        por que resolver programar agora? O que aconteceu?
+                        </p>
+                    </br>
+                        <p> 
+                        Antes de entrar na faculdade, sempre tive contato com artes visuais e com o aspecto de impacto que a criação delas agrega a 
+                        quem vê. A anos me envolvo com desenho tradicional e a cerca de 9 anos descobri o mundo de possibilidades do desenho digital. Junto
+                        com essa descoberta esbarrei com as linguagens de programação front-end e o que elas possibilitam: <strong> CRIAÇÃO DE SITES QUE SÃO MAIS QUE
+                        SITES, SÃO OBRAS DE ARTE</strong>.
+                        </p>
+                    </br>
+                        <P>
+                        Daí foi paixão pelo WebDesign e tudo que vem junto com ele: UX/UI Design e programação Front-end. O resto você, meu caro
+                        leitor, vai descobrir ao passear por essa página que criei do zero com todo meu conhecimento adquirido até hoje. Obrigado por ler até
+                        aqui!
+                        </P>
+                    </div>
+                 </div>
+
+                 <div class="informacao" id="informacao-minhas-redes">
+                    <h3 class="sub-titulo" style="font-family: 'VT323', cursive;">Minhas Redes</h3>
+
+                    <ul class="redes-sociais">
+                        <li>
+                            <a href="https://www.linkedin.com/in/henrique-maya/" target="_blank" class="curriculo" style="font-family: 'VT323', cursive;">Linkedin</a>
+                        </li>
+                        <li>
+                            <a href="https://www.instagram.com/henrymaia.t/" target="_blank" class="instagram" style="font-family: 'VT323', cursive;">Instagram</a>
+                        </li>
+                        <li>
+                            <a href="https://github.com/TyHenry96" target="_blank" class="github" style="font-family: 'VT323', cursive;">Github</a>
+                        </li>
+                    </ul>
+                 </div>
+            </div>
+        </div>
+    </main>
+    <script src="./src/js/index.js"></script>
+    
+    <p class="assinatura">Henrique Maia JuniorDev</p>
+</body>
+</html>
