@@ -50,7 +50,7 @@ function mostrarAba(aba){ //criando outra função
 
 //FUNÇÕES PARA SLIDE DO MENU
 function openNav(){
-    document.getElementById('myNav').style.width = "30%";
+    document.getElementById('myNav').style.width = "45%";
 }
 
 function closeNav(){

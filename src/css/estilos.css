@@ -7,32 +7,35 @@ body{ /* CORPO DO HTML GERAL */
     color: #f3f3f3;
     font-size: 16px;
     display: flex; /* aqui libera sistema semelhante a flexbox e permite organização do conteúdo sem caos */
-   
-    justify-content: center; /* X */
+    justify-content: flex-start; /* X */
     align-items: space-around; /* X */
     min-height: 100vh; /* X */  /* marcados em X são possívels por conta do DISPLAY FLEX */
     padding: 10px;
+    justify-content: space-between;
 
 }
 
-/* header {
+.box{
     display: flex;
-    flex-direction: row;
-} */
+    justify-content: space-between;
+}
 
 .assinatura{
     align-self: flex-end;
-    text-align: right;
     font-size: 12px;
-    color: #570f53;
+    color: #ffffff;
 }
 
+.logo{
+    margin: 10px;
+}
 
 .cartao{ /* DIV DE TODO O CORPO DO CARTÃO */
     background-color: #131313;
+    opacity: 0.8;
     width: 500px;
-    border: 2px solid #7e1078; /* importante ter 3 propriedades */
-    border-radius: 10px;
+   /* border: 2px solid #979244;  importante ter 3 propriedades */
+    /* border-radius: 10px; */
     overflow: hidden; /* cantos da div sem sobrepor o contorno do cartão */
     animation: cartao 1s linear; /* configurar a animação, dar um nome a ela e determinar sua duração */
 
@@ -40,26 +43,20 @@ body{ /* CORPO DO HTML GERAL */
 @keyframes cartao { /* estados que farão parte da transição da animação */
     from{ opacity: 0;
     }
-    to{ opacity: 1; 
+    to{ opacity: 0.8; 
     }
 }
-
 .cartao .abas img {  /* ICONES DE EXTENSÃO GIF */
     width: 25px;  
 }
-
 .cartao .minhas-informacoes img{ /* FOTO DE PERFIL */
-    border-radius: 50px;
-    border: 4px solid #7e1078;
+    border-radius: 150px;
+    justify-content: center;
 }
-
 .cartao .minhas-informacoes{ /* CABEÇALHO DO PORTIFOLIO */
-    padding-top: 20px;
     display: flex;
     flex-direction: column;
     align-items: center; /* alinha horizontalmente os itens em coluna */
-    gap: 12px;
-
 }
 
 .cartao .minhas-informacoes .nome{ /* NOME ABAIXO DO PERFIL */
@@ -197,8 +194,6 @@ body{ /* CORPO DO HTML GERAL */
     background-color: #570f53;
     margin: 5px;
     cursor: pointer;
-    align-self: flex-start;
-    
 }
 
 .nav-button i{
@@ -207,9 +202,8 @@ body{ /* CORPO DO HTML GERAL */
 
 .overlay{
     height: 100%;
-    /* background-color: rgb(0, 0, 0); */
     background-color: rgba(0, 0, 0, 0.9);
-    z-index: 8;
+    z-index: 1;
     position: fixed;
     width: 0%;
     left: 0;
@@ -218,7 +212,7 @@ body{ /* CORPO DO HTML GERAL */
     transition: all 0.5s;
 }
 
-.overlay-content{
+.overlay-content{ /* caixa onde se colocaram os elementos do menu */
     position: relative;
     top: 25%;  
     width: 100%;
@@ -226,7 +220,7 @@ body{ /* CORPO DO HTML GERAL */
     margin-top: 30px;
 }
 
-.overlay a{
+.overlay a{ /* links do menu deslizante formatação inicial */
     padding: 8px;
     text-decoration: none;
     color: #818181;
@@ -236,11 +230,11 @@ body{ /* CORPO DO HTML GERAL */
     transition: 0.3s;
 }
 
-.overlay a:hover, .overlay a:focus{
+.overlay a:hover, .overlay a:focus{ /* links dentro do menu deslizante sob efeito hover */
     color: #f1f1f1;
 }
 
-.overlay .closebtn{
+.overlay .closebtn{ /* botao x pra sair da div */
     position: absolute;
     top: 5px;
     right: 15px;
