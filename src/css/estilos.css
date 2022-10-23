@@ -12,13 +12,13 @@ body{ /* CORPO DO HTML GERAL */
     align-items: space-around; /* X */
     min-height: 100vh; /* X */  /* marcados em X são possívels por conta do DISPLAY FLEX */
     padding: 10px;
-    gap:20%;
+
 }
 
-header {
+/* header {
     display: flex;
     flex-direction: row;
-} 
+} */
 
 .assinatura{
     align-self: flex-end;
