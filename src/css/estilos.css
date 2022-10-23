@@ -1,5 +1,5 @@
 body{ /* CORPO DO HTML GERAL */
-    background-image: url(/src/imagens/fundo.jpg);
+    background-image: url("/src/imagens/fundo.jpeg");
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -32,7 +32,7 @@ body{ /* CORPO DO HTML GERAL */
 
 .cartao{ /* DIV DE TODO O CORPO DO CARTÃO */
     background-color: #131313;
-    opacity: 0.8;
+    opacity: 0.9;
     width: 500px;
    /* border: 2px solid #979244;  importante ter 3 propriedades */
     /* border-radius: 10px; */
@@ -43,7 +43,7 @@ body{ /* CORPO DO HTML GERAL */
 @keyframes cartao { /* estados que farão parte da transição da animação */
     from{ opacity: 0;
     }
-    to{ opacity: 0.8; 
+    to{ opacity: 0.9; 
     }
 }
 .cartao .abas img {  /* ICONES DE EXTENSÃO GIF */
